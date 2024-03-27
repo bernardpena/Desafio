@@ -9,12 +9,12 @@
     <title>Registro de Tareas</title>
 </head>
 <body>
-    <div class="contenedor">
+    <div class="container">
         <div class="titulo">
             <h1>Todo List</h1>
             <hr>
         </div>
-        <div class="ingresoData">
+        <div class="ingresoDatos">
             <p>Nueva Tarea</p>
             <div class="input-data">
                 <input type="text" title="Boton Agregar" id="txtIngreso">
@@ -22,12 +22,14 @@
             </div>
         </div>
         <br><br>
-        <div class="contenTareas-estados">
-            <div class="estados">
-                <span id="total-text">Total: </span><span id="total">0</span><br>
-                <span id="realizadas-text">Realizadas: </span><span id=realizadas>0</span>
+        <div class="containerEstados">
+            <div class="estadoTotal">
+                <span id="totalText">Total: </span><span id="contadorTotal">0</span><br>
             </div>
-            <div class="tareas">
+            <div>
+            <span id="realizadasText">Realizadas: </span><span id=contadorRealizadas>0</span>
+            </div>
+            <div class="llenadoTareas">
                 <p>para llenado</p>
             </div>
         </div>
