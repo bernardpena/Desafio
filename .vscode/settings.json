@@ -1,0 +1,22 @@
+{
+    "spellright.language": [
+        "es",
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "html"
+    ],
+    "cSpell.words": [
+        "Agregar",
+        "Boton",
+        "llenado",
+        "Nueva",
+        "Realizadas",
+        "Registro",
+        "Tarea",
+        "Tareas"
+    ]
+}
