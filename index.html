@@ -16,23 +16,37 @@
         </div>
         <div class="ingresoDatos">
             <p>Nueva Tarea</p>
-            <div class="input-data">
-                <input type="text" title="Boton Agregar" id="txtIngreso">
-                <button id="btn-Agregar">Agregar</button>
+            <div class="inputdatos">
+                <input type="text" title="Boton Agregar" id="txtIngreso" placeholder="Nueva Tarea...">
+                <button id="btnAgregar">Agregar</button>
             </div>
         </div>
         <br><br>
         <div class="containerEstados">
             <div class="estadoTotal">
-                <span id="totalText">Total: </span><span id="contadorTotal">0</span><br>
+                <div class="totaltext">
+                    <span id="totalText">Total: </span>
+                </div>
+                <div class="contadorTotal">
+                    <span id="contadorTotal">0</span>
+                </div>
             </div>
-            <div>
-            <span id="realizadasText">Realizadas: </span><span id=contadorRealizadas>0</span>
+            <div class="realizadasText">
+                <span id="realizadasText">Realizadas: </span>
+                <span id="contadorRealizadas">0</span>
             </div>
             <div class="llenadoTareas">
-                <p>para llenado</p>
+                <h3 class="identificador">ID</h3>
+                <h3 class="tareaNueva">Tarea</h3>
+                <ul id="llenadoTareas">
+                    <li></li>
+                    <!-- <input type="checkbox" id="checkbox" value="true"><br> -->
+                </ul>
             </div>
         </div>
+        </div>
     </div>
+
+    <script src="./assets/js/index.js" ></script>
 </body>
 </html>

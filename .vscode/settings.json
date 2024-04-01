@@ -1,27 +1,46 @@
 {
     "spellright.language": [
-        "es",
-        "en"
+        "en",
+        "es"
     ],
     "spellright.documentTypes": [
         "markdown",
         "latex",
         "plaintext",
-        "html"
+        "html",
+        "javascript"
     ],
     "cSpell.words": [
         "Agregar",
+        "Asear",
+        "borrar",
         "Boton",
+        "cargar",
+        "chequeo",
+        "completada",
+        "comprar",
         "contador",
+        "contenedor",
         "Datos",
+        "Eliminar",
         "estado",
         "Estados",
+        "funciona",
         "ingreso",
+        "Invitados",
+        "limpiar",
+        "lista",
         "llenado",
         "Nueva",
+        "nuevo",
+        "nuevodiv",
+        "realizada",
         "Realizadas",
         "Registro",
+        "rendertareas",
+        "selcheck",
         "Tarea",
-        "Tareas"
+        "Tareas",
+        "totaltext"
     ]
 }
