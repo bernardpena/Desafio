@@ -25,7 +25,7 @@ const totalTareas = document.querySelector("#contadorTotal");
 const checkbox = document.querySelector("#checkbox");
 
 // cargar la tarea por su ID
-// renderTareas();
+renderTareas();
 
 //función de borrar
 function borrar(id) {
@@ -38,24 +38,35 @@ function borrar(id) {
 
 btnAgregar.addEventListener("click", () => {
   /* Agregamos la nueva tarea al arreglo con un objeto que incluye un id y el nombre */
-  const nuevoTarea = {
-    id: Math.round(Math.random() * 400),
-    nombre: tareaInput.value,
-    checkbox: false,
-  };
+  if (tareaInput.value !== "") {
+    const nuevoTarea = {
+      id: Math.round(Math.random() * 400),
+      nombre: tareaInput.value,
+      checkbox: false,
+    };
 
-  cargarTarea.push(nuevoTarea);
-  tareaInput.value = "";
-  renderTareas();
+    cargarTarea.push(nuevoTarea);
+    tareaInput.value = "";
+    renderTareas();
+    tareaInput.focus();
+  } else {
+    message();
+    tareaInput.focus();
+  }
 });
 
 // función  para mostrar las tareas en el HTML
 function renderTareas() {
   let html = "";
   for (let tarea of cargarTarea) {
-    html += `<li>${tarea.id} ${tarea.nombre} 
-    <input type="checkbox" class="check" id="check${tarea.id}" onclick="chequeo()"/>
-    <button onclick="borrar(${tarea.id})">Eliminar</button></li>`;
+    html += `
+    <tr>
+    <td>${tarea.id}</td>
+    <td>${tarea.nombre}</td>
+    <td><input type="checkbox" class="check" id="check${tarea.id}" onclick="chequeo()"/></td>
+    <td><button class="btncheck" onclick="borrar(${tarea.id})"><i class="fa-solid fa-xmark fa-beat fa-xl" style="color: #ff0000;"></i></button></li></td>
+    </tr>
+    `;
   }
   listaDeTareas.innerHTML = html;
   totalTareas.textContent = `${cargarTarea.length}`;
@@ -66,4 +77,12 @@ function chequeo() {
   const checkArray = Array.from(selcheck);
   const filterCheck = checkArray.filter((x) => x.checked == true);
   contadorRealizadas.innerHTML = filterCheck.length;
+}
+
+function message() {
+  swal(
+    "Atención!",
+    "Debe llenar el campo vació para  AGREGAR una nueva Tarea",
+    "error"
+  );
 }

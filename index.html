@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--  CSS only -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
+    <!-- Awesome -->
+    <script src="https://kit.fontawesome.com/5d4524d802.js" crossorigin="anonymous"></script>
+    <!--message-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
     <title>Registro de Tareas</title>
 </head>
 <body>
@@ -15,7 +19,7 @@
             <hr>
         </div>
         <div class="ingresoDatos">
-            <p>Nueva Tarea</p>
+            <p>Ingrese Tarea</p>
             <div class="inputdatos">
                 <input type="text" title="Boton Agregar" id="txtIngreso" placeholder="Nueva Tarea...">
                 <button id="btnAgregar">Agregar</button>
@@ -23,30 +27,43 @@
         </div>
         <br><br>
         <div class="containerEstados">
-            <div class="estadoTotal">
-                <div class="totaltext">
-                    <span id="totalText">Total: </span>
+            <div class="contadores">
+                <div class="estadoTotal">
+                    <div class="totaltext">
+                        <span id="totalText">Total:</span>
+                        <span id="contadorTotal">0</span>
+                    </div>
+                    <div class="contadorTotal">
+                    </div>
+                    <div class="realizadasText">
+                        <span id="realizadasText">Realizadas:</span>
+                        <span id="contadorRealizadas">0</span>
+                    </div>
+                    <div class="contadorRealizadas">
+                    </div>
                 </div>
-                <div class="contadorTotal">
-                    <span id="contadorTotal">0</span>
                 </div>
-            </div>
-            <div class="realizadasText">
-                <span id="realizadasText">Realizadas: </span>
-                <span id="contadorRealizadas">0</span>
-            </div>
-            <div class="llenadoTareas">
-                <h3 class="identificador">ID</h3>
-                <h3 class="tareaNueva">Tarea</h3>
-                <ul id="llenadoTareas">
-                    <li></li>
-                    <!-- <input type="checkbox" id="checkbox" value="true"><br> -->
-                </ul>
-            </div>
+                <div class="tabletareas">
+                    <table class="containerTareas">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Tarea</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="llenadoTareas">
+        
+                        </tbody>
+                    </table>
+                </div>
         </div>
-        </div>
-    </div>
 
     <script src="./assets/js/index.js" ></script>
+    <!--alert Personalizado -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/sweetalert.css">
+
+    
 </body>
 </html>
